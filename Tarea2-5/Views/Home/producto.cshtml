@@ -1,0 +1,52 @@
+﻿
+@{
+    ViewBag.Title = "Listado de peliculas";
+}
+@model IEnumerable<Tarea2_5.Models.Producto>
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>producto</title>
+</head>
+<body>
+    <div>
+        <table>
+            <tr>
+                <th>
+                    Id
+                </th>
+                <th></th>
+                <th>
+                    Descripcion
+                </th>
+                <th></th>
+                <th>
+                    Precio
+                </th>
+                
+            </tr>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Id)
+                    </td>
+                    <th></th>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Descripcion)
+                    </td>
+                    <th></th>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Precio)
+                    </td>
+                    
+                </tr>
+            }
+        </table>
+    </div>
+</body>
+</html>

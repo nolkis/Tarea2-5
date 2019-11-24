@@ -1,0 +1,75 @@
+﻿
+@{
+    ViewBag.Title="Listado de peliculas";
+}
+@model IEnumerable<Tarea2_5.Models.Pelicula>
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        <table>
+            <tr>
+                <th>
+                    Titulo
+                </th>
+                <th></th>
+                <th>
+                    Director
+                </th>
+                <th></th>
+                <th>
+                    Autor Principal
+                </th>
+                <th></th>
+                <th>
+                    Num. Autores
+                </th>
+                <th></th>
+                <th>
+                    Duracion
+                </th>
+                <th></th>
+                <th>
+                    Estreno
+                </th>
+            </tr>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Titulo)
+                    </td>
+                    <th></th>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Director)
+                    </td>
+                    <th></th>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.AutorPrincipal)
+                    </td>
+                    <th></th>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.numAutores)
+                    </td>
+                    <th></th>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Duracion)
+                    </td>
+                    <th></th>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Estreno)
+                    </td>
+                    <th></th>
+                </tr>
+            }
+        </table>
+
+    </div>
+</body>
+</html>
